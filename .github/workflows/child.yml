@@ -10,6 +10,10 @@ on:
         required: false
         type: string
         default: "day"
+    outputs:
+      greeting-message:
+        description: "Greeting message"
+        value: ${{ jobs.greet.outputs.greeting-message }}
 
 jobs:
   greet:
@@ -30,3 +34,4 @@ jobs:
 
       - name: Display greeting
         run: echo "${{ steps.greeting.outputs.message }}"
+
