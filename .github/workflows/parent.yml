@@ -23,10 +23,11 @@ jobs:
     runs-on: ubuntu-latest
     needs: call-child
     steps:
-      - run: echo "Le workflow enfant a renvoyé :${{ needs.call-child.outputs.greeting-message }}"
+      - run: 'echo "Le workflow enfant a renvoyé : ${{ needs.call-child.outputs.greeting-message }}"'
       
   cleanup:
     runs-on: ubuntu-latest
     needs: call-child
     steps:
       - run: echo "Cleaning up after the greeting..."
+
