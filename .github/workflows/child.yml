@@ -30,6 +30,3 @@ jobs:
 
       - name: Display greeting
         run: echo "${{ steps.greeting.outputs.message }}"
-
-      - name: Debug
-        run: echo "Output = ${{ jobs.greet.outputs.greeting-message }}"
